@@ -1,0 +1,173 @@
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+
+          svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+          otf: "opentype",
+          ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+@mixin button($width_b, $height_b, $bckg_color_b, $color_b) {
+  width: $width_b;
+  height: $height_b;
+  background-color: $bckg_color_b;
+  color: $color_b;
+}
+@mixin box-shadow($bot, $color) {
+  box-shadow: 0 $bot $color;
+}
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin service_cards($num, $img_w, $img_h, $pad_left, $pad_right, $marg_t, $marg_b, $margin_l_text,  $marg_b_t,$color) {
+  .swiper-slide {
+    &:nth-child(4n+#{$num}) {
+        img {
+          width: $img_w;
+          height: $img_h;
+          padding-left: $pad_left;
+          padding-right: $pad_right;
+          margin-top: $marg_t;
+          box-sizing: content-box;
+        }
+
+        span:nth-child(2) {
+          font-size: 24px;
+          line-height: 18px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0;
+          color: $color;
+          margin-bottom: $marg_b;
+          margin-left: $margin_l_text;
+        }
+
+        span:nth-child(3) {
+          margin-bottom: $marg_b_t;
+        }
+
+        span:nth-child(4) {
+          color: #3c4761;
+        }
+      }
+  }
+}
+@mixin team($num, $color, $num_1, $padding_1, $num_2, $padding_2, $left_pos, $top_pos, $right_pos, $marg_r) {
+  .swiper-slide {
+    &:nth-child(4n+#{$num}) {
+      :nth-child(1) {
+        span:nth-child(2) {
+          font-family: titilliumweb_semibold, sans-serif;
+          font-weight: 400;
+          position: relative;
+          bottom: -15px;
+          right: $right_pos;
+          font-kerning: none;
+          letter-spacing: 0.41px;
+        }
+        span:nth-child(3) {
+          color: $color;
+          letter-spacing: 0.62px;
+          margin-right: $marg_r;
+        }
+        span:nth-child(4) {
+          position: relative;
+          top: $top_pos;
+          line-height: 24px;
+          font-size: 15px;
+          letter-spacing: 0.67px;
+          left: $left_pos;
+        }
+      }
+      &:nth-child(2n+#{$num_1}) {
+        div:nth-child(5) {
+          padding: $padding_1;
+          #icon_marg {
+            margin-left: 1px;
+          }
+        }
+      }
+      &:nth-child(2n+#{$num_2}) {
+        div:nth-child(5) {
+          padding: $padding_2;
+          #icon_marg {
+            margin-left: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+//@mixin team($num, $color) {
+//  .swiper-slide {
+//    &:nth-child(4n+#{$num}) {
+//      :nth-child(1) {
+//          span:nth-child(2) {
+//            margin-bottom: -31px;
+//            padding-right: 6px;
+//            letter-spacing: 0.014em;
+//          }
+//          span:nth-child(3) {
+//            color: $color;
+//            margin-bottom: -23px; //3
+//            letter-spacing: 0.62px;
+//            margin-right: 2px;
+//          }
+//          span:nth-child(4) {
+//            line-height: 23px;
+//            margin-bottom: 1px;
+//            margin-right: 4px;
+//            margin-top: 3px; //-9
+//            letter-spacing: 0.21px
+//          }
+//      }
+//      &:nth-child(2n) {
+//        div:nth-child(5) {
+//          padding: 0 45px 0 40px;
+//          #icon_marg {
+//            margin-left: 1px;
+//          }
+//        }
+//      }
+//      &:nth-child(2n+1) {
+//        div:nth-child(5) {
+//          padding: 0 23px 0 19px;
+//        }
+//      }
+//    }
+//  }
+//}
+//@mixin team1099($num) {
+//  .swiper-slide {
+//    &:nth-child(4n+#{$num}) {
+//      :nth-child(1) {
+//        &:nth-child(2n+1) {
+//          div:nth-child(5) {
+//            padding: 0 32px 0 19px;
+//            #icon_marg {
+//              margin-left: 1px;
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
