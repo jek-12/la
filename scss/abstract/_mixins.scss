@@ -24,6 +24,21 @@
     src: $src;
   }
 }
+@mixin pagination ($num){
+  .swiper-pagination-#{$num} {
+    position: relative;
+    width: 130px;
+    height: 15px;
+    margin: 30px auto 0 auto;
+  }
+  .swiper-pagination-bullet {
+    @include size(12px, 12px);
+    margin: 0 10px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #0578b4;
+  }
+}
 @mixin button($width_b, $height_b, $bckg_color_b, $color_b) {
   width: $width_b;
   height: $height_b;
@@ -116,58 +131,3 @@
     }
   }
 }
-//@mixin team($num, $color) {
-//  .swiper-slide {
-//    &:nth-child(4n+#{$num}) {
-//      :nth-child(1) {
-//          span:nth-child(2) {
-//            margin-bottom: -31px;
-//            padding-right: 6px;
-//            letter-spacing: 0.014em;
-//          }
-//          span:nth-child(3) {
-//            color: $color;
-//            margin-bottom: -23px; //3
-//            letter-spacing: 0.62px;
-//            margin-right: 2px;
-//          }
-//          span:nth-child(4) {
-//            line-height: 23px;
-//            margin-bottom: 1px;
-//            margin-right: 4px;
-//            margin-top: 3px; //-9
-//            letter-spacing: 0.21px
-//          }
-//      }
-//      &:nth-child(2n) {
-//        div:nth-child(5) {
-//          padding: 0 45px 0 40px;
-//          #icon_marg {
-//            margin-left: 1px;
-//          }
-//        }
-//      }
-//      &:nth-child(2n+1) {
-//        div:nth-child(5) {
-//          padding: 0 23px 0 19px;
-//        }
-//      }
-//    }
-//  }
-//}
-//@mixin team1099($num) {
-//  .swiper-slide {
-//    &:nth-child(4n+#{$num}) {
-//      :nth-child(1) {
-//        &:nth-child(2n+1) {
-//          div:nth-child(5) {
-//            padding: 0 32px 0 19px;
-//            #icon_marg {
-//              margin-left: 1px;
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//}

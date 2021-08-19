@@ -859,10 +859,6 @@ ol, ul {
 html {
   scroll-behavior: smooth; }
 
-body {
-  height: 1000px;
-  background-color: #1883ba; }
-
 header {
   max-height: 596px;
   background-color: #87509c; }
@@ -1090,7 +1086,7 @@ section .pagination a:after {
   header .header_congratulatory_text {
     padding-top: 90px; } }
 
-section .service_section .headline_1, section .team .headline_1 {
+section .service_section .headline_1, section .team .headline_1, section .skills .headline_1 {
   font-family: titilliumweb_semibold, sans-serif;
   font-size: 39px;
   line-height: 29px;
@@ -1102,14 +1098,14 @@ section .service_section .headline_1, section .team .headline_1 {
   font-kerning: none;
   letter-spacing: 3.82px; }
 
-section .service_section .line, section .team .line {
+section .service_section .line, section .team .line, section .skills .line {
   width: 87px;
   height: 4px;
   opacity: 0.14;
   background-color: #000000;
   margin: 0 auto; }
 
-section .service_section .underline_text, section .team .underline_text {
+section .service_section .underline_text, section .team .underline_text, section .skills .underline_text {
   text-align: center;
   font-family: titilliumweb_regular, sans-serif;
   font-size: 18px;
@@ -1227,9 +1223,9 @@ section .service_section {
     color: #3c4761; }
   section .service_section .service_cards {
     height: 300px; }
-  section .service_section .swiper-pagination {
+  section .service_section .swiper-pagination-0 {
     position: relative;
-    min-width: 50px;
+    width: 130px;
     height: 15px;
     margin: 30px auto 0 auto; }
   section .service_section .swiper-pagination-bullet {
@@ -1496,7 +1492,7 @@ section .service_section {
 section .team {
   width: 100%;
   background-color: #e7f1f8;
-  height: 914px; }
+  padding-bottom: 127px; }
   section .team .headline_1 {
     padding: 117px 0 25px 4px;
     color: #3c4761; }
@@ -1712,6 +1708,17 @@ section .team {
     padding: 0 23px 0 19px; }
     section .team .swiper-slide:nth-child(4n+4):nth-child(2n+1) div:nth-child(5) #icon_marg {
       margin-left: 1px; }
+  section .team .swiper-pagination-1 {
+    position: relative;
+    width: 130px;
+    height: 15px;
+    margin: 30px auto 0 auto; }
+  section .team .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 10px; }
+  section .team .swiper-pagination-bullet-active {
+    background: #0578b4; }
 
 @media (max-width: 1099px) {
   section .team .team_slider {
@@ -2056,5 +2063,41 @@ section .team {
 @media (max-width: 360px) {
   section .team .headline_1 {
     font-size: 17px; } }
+
+section .skills {
+  background-color: #ffffff;
+  width: 100%;
+  height: 655px; }
+  section .skills .headline_1 {
+    color: #3c4761;
+    padding: 116px 0 23px 6px;
+    letter-spacing: 4px; }
+  section .skills .underline_text {
+    color: #3c4761;
+    padding-top: 16px; }
+    section .skills .underline_text :first-child {
+      word-spacing: 0.2px; }
+    section .skills .underline_text :last-child {
+      padding-left: 5px;
+      letter-spacing: 0.42px; }
+  section .skills .skills-slider {
+    max-width: 1040px;
+    padding: 82px 0 0 0; }
+  section .skills .dws-progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  section .skills .swiper-pagination-2 {
+    position: relative;
+    width: 130px;
+    height: 15px;
+    margin: 30px auto 0 auto; }
+  section .skills .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 10px; }
+  section .skills .swiper-pagination-bullet-active {
+    background: #0578b4; }
 
 /*# sourceMappingURL=style.css.map */
