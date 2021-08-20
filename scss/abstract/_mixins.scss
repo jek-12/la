@@ -131,3 +131,26 @@
     }
   }
 }
+@mixin prog_bar($num) {
+  .dws-progress-bar-#{$num} {
+    canvas {
+      position: absolute;
+      left: -12px;
+      bottom: 31px;
+    }
+
+    .progress-percentage {
+      position: relative;
+      bottom: -55px;
+      font-size: 45px;
+      left: 66px;
+
+      .pixel_perfect {
+        position: absolute;
+        bottom: 10px;
+        font-size: 20px;
+        transform: scale(0.8, 1.5);
+      }
+    }
+  }
+}

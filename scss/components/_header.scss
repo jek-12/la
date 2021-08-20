@@ -570,16 +570,18 @@ section {
         letter-spacing: 0.42px;
       }
     }
+    .skills_cards {
+      width: 195px;
+      height: 220px;
+    }
     .skills-slider {
       max-width: 1040px;
       padding: 82px 0 0 0;
     }
-    .dws-progress-bar {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    @for $i from 0 to 4 {
+      @include prog-bar(#{$i});
     }
+
     @include pagination(2);
   }
 }

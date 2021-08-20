@@ -13,6 +13,8 @@ $.scrollify({
     updateHash: true,//
     touchScroll:true,
     before:function(i,panels) {
+
+        console.log('before');
         let ref = panels[i].attr("data-section-name");
 
         $(".pagination .active").removeClass("active");
@@ -39,24 +41,15 @@ $.scrollify({
             });
         swap++;
     }
-
-
-        $(".dws-progress-bar").circularProgress({
-            color: "#25ffe4",
-            line_width: 17,
-            height: "350px",
-            width: "350px",
-            percent: 0,
-            // counter_clockwise: true,
-            starting_position: 25
-        }).circularProgress('animate', 100, 2000);
     },
     afterResize:function() {},
     afterRender:function() {
+        console.log('afterRender');
         let pagination = "<ul class=\"pagination\">";
         let activeClass = "";
         $(".panel").each(function (i) {
             activeClass = "";
+            console.log($.scrollify.currentIndex());
             if (i === $.scrollify.currentIndex()) {
                 activeClass = "active";
             }
@@ -75,7 +68,7 @@ function anim(for_what) {
         width: "15px",
     }, 500);
 }
-function anim_border (box, span) {
+function anim_border(box, span) {
     setTimeout(function () {
         box.css("border-radius", "50%");
         box.css("transform", "rotate(180deg)");

@@ -32,7 +32,7 @@
 
     });
 
-setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("display", "none"):$(".swiper-pagination-0").css("display", "block"),100);
+setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("display", "none"):$(".swiper-pagination-0").css("display", "block"),150);
 
     let swiper_s = new Swiper('.team_slider', {
         slidesPerView: 4,
@@ -65,7 +65,7 @@ setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("displ
         }
 
     });
-    setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-1").css("display", "none"):$(".swiper-pagination-1").css("display", "block"),100);
+    setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-1").css("display", "none"):$(".swiper-pagination-1").css("display", "block"),150);
 
 
     let swiper_t = new Swiper('.skills-slider', {
@@ -99,4 +99,4 @@ setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("displ
         }
 
     });
-    setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-2").css("display", "none"):$(".swiper-pagination-2").css("display", "block"),100);
+    setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-2").css("display", "none"):$(".swiper-pagination-2").css("display", "block"),150);

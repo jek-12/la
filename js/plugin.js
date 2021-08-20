@@ -15,19 +15,35 @@
                 percent: 100,
                 counter_clockwise: false,
                 percentage: true,
-                text: ''
+                text: '',
+                num:0,
             }, options );
             global_settings = settings;
 
 
             // Create percentage
+
             var percentage = $("<div class='progress-percentage'></div>");
-
+            var percentage1 = $("<div class='progress-percentage1'></div>");
+            var percentage2 = $("<div class='progress-percentage2'></div>");
+            var percentage3 = $("<div class='progress-percentage3'></div>");
+            console.log(JSON.stringify(global_settings));
             if(!global_settings.percentage) {
-                percentage.text(global_settings.percentage);
-            }
-            $(this).append(percentage);
+                if(global_settings.num === 0) {
+                    percentage.text(global_settings.percentage);
 
+                    $(this).append(percentage);
+                }   else if(global_settings.num === 1) {
+                    percentage1.text(global_settings.percentage);
+                    $(this).append(percentage1);
+                }   else if(global_settings.num === 2) {
+                    percentage2.text(global_settings.percentage);
+                    $(this).append(percentage2);
+                }   else {
+                    percentage3.text(global_settings.percentage);
+                    $(this).append(percentage3);
+                }
+            }
 
             // Create text
             var text = $("<div class='progress-text'></div>");
@@ -49,12 +65,14 @@
             appendUnit(global_settings.width);
             appendUnit(global_settings.height);
 
+
             // Apply global_settings
             $(this).css({
                 "height": global_settings.height,
                 "width": global_settings.width
             });
             $(this).addClass("circular-progress-bar");
+
 
             // Remove old canvas
             $(this).find("canvas").remove();
@@ -68,6 +86,7 @@
         percent : function(value) {
             // Change percent
             global_settings.percent = value;
+
             // Apply global_settings
             $(this).css({
                 "height": global_settings.height,
@@ -159,7 +178,10 @@
     };
     // Put percentage or custom text inside progress circle
     function insertText(scope) {
-        $(".progress-percentage").text(Math.round(global_settings.percent) + "%");
+        $(".progress-percentage").text(Math.round(global_settings.percent));//
+        $(".progress-percentage").append("<span class = \'pixel_perfect\'>%</span>");
+        $(".progress-percentage0").text(Math.round(global_settings.percent));//
+        $(".progress-percentage0").append("<span class = \'pixel_perfect\'>%</span>");
     }
     // create canvas
     function createCanvas(scope) {
