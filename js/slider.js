@@ -10,6 +10,9 @@
             el: '.swiper-pagination-0',
             clickable: true,
         },
+        keyboard: {
+            enabled: true,
+        },
         breakpoints: {
             1: {
                 slidesPerView: 1,
@@ -32,7 +35,7 @@
 
     });
 
-setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("display", "none"):$(".swiper-pagination-0").css("display", "block"),150);
+// setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("display", "none"):$(".swiper-pagination-0").css("display", "block"),150);
 
     let swiper_s = new Swiper('.team_slider', {
         slidesPerView: 4,
@@ -44,39 +47,8 @@ setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("displ
             el: '.swiper-pagination-1',
             clickable: true,
         },
-        breakpoints: {
-            1: {
-                slidesPerView: 1,
-                spaceBetween: 24,
-            },
-            500: {
-                slidesPerView: 2,
-                spaceBetween: 24,
-            },
-            740: {
-                spaceBetween: 30,
-                slidesPerView: 3,
-
-            },
-            1100: {
-                spaceBetween: 80,
-                slidesPerView: 4,
-            }
-        }
-
-    });
-    setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-1").css("display", "none"):$(".swiper-pagination-1").css("display", "block"),150);
-
-
-    let swiper_t = new Swiper('.skills-slider', {
-        slidesPerView: 4,
-        spaceBetween: 80,
-        slidesPerGroup: 1,
-        loop: true,
-        grabCursor: true,
-        pagination: {
-            el: '.swiper-pagination-2',
-            clickable: true,
+        keyboard: {
+            enabled: true,
         },
         breakpoints: {
             1: {
@@ -99,4 +71,45 @@ setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-0").css("displ
         }
 
     });
-    setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-2").css("display", "none"):$(".swiper-pagination-2").css("display", "block"),150);
+    // setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-1").css("display", "none"):$(".swiper-pagination-1").css("display", "block"),150);
+
+
+    let swiper_t = new Swiper('.skills-slider', {
+        slidesPerView: 4,
+        spaceBetween: 80,
+        slidesPerGroup: 1,
+        loop: true,//false
+        grabCursor: true,
+        pagination: {
+            el: '.swiper-pagination-2',
+            clickable: true,
+        },
+        keyboard: {
+            enabled: true,
+        },
+        zoom: {
+            containerClass:"swiper-zoom-container",
+            maxRatio: 3,
+        },
+        breakpoints: {
+            1: {
+                slidesPerView: 1,
+                spaceBetween: 24,
+            },
+            500: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+            740: {
+                spaceBetween: 30,
+                slidesPerView: 3,
+
+            },
+            1100: {
+                spaceBetween: 80,
+                slidesPerView: 4,
+            }
+        }
+
+    });
+    // setInterval(()=> $(window).width() > 1100 ? $(".swiper-pagination-2").css("display", "none"):$(".swiper-pagination-2").css("display", "block"),150);

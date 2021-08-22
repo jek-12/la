@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1">
     <meta name = "discription" content = "d...">
     <meta name = "keywords" content = "d...">
     <meta name = "author" content = "jek-12">
@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.19/jquery.scrollify.js"></script>
+    <script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
     <script>
         $(function() {
             $.scrollify({
@@ -20,6 +21,7 @@
     </script>
 </head>
 <body>
+<div class = "load"></div>
 <header class = "scroll panel" data-section-name="home">
     <div class = "container header_menu">
         <div class = "disappearing_header">
@@ -248,23 +250,35 @@
                 <div class="swiper-container skills-slider">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class = "skills_cards">
-                                <div class="dws-progress-bar-0"></div>
+                            <div class="circles">
+                                <div class="second circle">
+                                    <strong></strong>
+                                </div>
+                                <span>Web Design</span>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class = "skills_cards">
-                                <div class="dws-progress-bar-1"></div>
+                            <div class="circles">
+                                <div class="second1 circle">
+                                    <strong></strong>
+                                </div>
+                                <span>HTML / CSS</span>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class = "skills_cards">
-                                <div class="dws-progress-bar-2"></div>
+                            <div class="circles">
+                                <div class="second2 circle circle_l">
+                                    <strong></strong>
+                                </div>
+                                <span>GRAPHIC DESIGN</span>
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class = "skills_cards">
-                                <div class="dws-progress-bar-3"></div>
+                            <div class="circles">
+                                <div class="second3 circle">
+                                    <strong></strong>
+                                </div>
+                                <span>UI / UX</span>
                             </div>
                         </div>
                     </div>
@@ -274,8 +288,8 @@
         <div class="swiper-pagination-2"></div>
     </div>
 </section>
-<script src="js/plugin.js"></script>
-<script src="js/progress_bar.js"></script>
+<script src="https://rawgit.com/kottenator/jquery-circle-progress/1.2.2/dist/circle-progress.js"></script>
+<script src="js/progress_bar1.js"></script>
 <script src = "js/main.js"></script>
 <script src = "js/shadow.js"></script>
 <script src = "js/menu_animation.js"></script>

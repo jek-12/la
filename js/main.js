@@ -1,3 +1,8 @@
+
+
+window.addEventListener('load', function () {
+    setTimeout(()=>$(".load").css("opacity", "0"),3000);
+    setTimeout(()=>$(".load").css("display", "none"),3500);//appendutu .load
 let swap = 0;
 $.scrollify({
     section : "section",
@@ -62,21 +67,21 @@ $.scrollify({
         //
     }
 });
-function anim(for_what) {
-    for_what.animate({
-        opacity: "1",
-        width: "15px",
-    }, 500);
-}
-function anim_border(box, span) {
-    setTimeout(function () {
-        box.css("border-radius", "50%");
-        box.css("transform", "rotate(180deg)");
-        span.css("border-radius", "50%");
-        span.css("transform", "rotate(225deg)");
-    }, 500);
-}
-
+    function anim(for_what) {
+        for_what.animate({
+            opacity: "1",
+            width: "15px",
+        }, 500);
+    }
+    function anim_border(box, span) {
+        setTimeout(function () {
+            box.css("border-radius", "50%");
+            box.css("transform", "rotate(180deg)");
+            span.css("border-radius", "50%");
+            span.css("transform", "rotate(225deg)");
+        }, 500);
+    }
+})
 //почитай за скрол перекидує до наступної секції і плавно вилізає панель після наступного скролу ховається і знову вилізає коллбек на скролл
     // $('header').on('scroll', function() {
     //     console.log($(this)[0].scrollHeight);
