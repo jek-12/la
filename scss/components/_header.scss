@@ -13,7 +13,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video, active, hover, selected {
+time, mark, audio, video, active, hover, selected, form {
   margin: 0;
   padding: 0;
   border: 0;
@@ -34,8 +34,8 @@ html {
   scroll-behavior: smooth;
 }
 header {
-  max-height: 596px;
   background-color: $header_bckg_c;
+  padding-bottom: 205px;
   .disappearing_header {
     transition: 1s;
     position: fixed;
@@ -178,14 +178,17 @@ header {
     }
   }
   .header_button {
-    padding-bottom: 205px;
     width: 100%;
     padding-left: 24px;
-    button {
+    .link {
       position: relative;
       bottom: -55px;
       margin: 0 auto;
-      padding-left: 14px;
+      width: min-content;
+    }
+    input {
+      transition: .8s;
+      padding-left: 7px;
       padding-top: 3px;
       text-transform: uppercase;
       font-family: titilliumweb_semibold, sans-serif;
@@ -198,8 +201,67 @@ header {
       @include button(293px, 65px, $header_bckg_button_c, $header_button_c);
       @include box-shadow(5px, #c86a40);
     }
+    input:hover {
+      color: rgba($header_button_c,0.8);
+      font-size: 20px;
+      box-shadow: 0 0 15px rgba(11, 6, 62, 0.7);
+    }
+    input:active {
+      font-size: 14px;
+    }
   }
+}
+@media (max-width: 933px) {
+  header {
+    padding-bottom: 100px;
+    .header_congratulatory_text {
+      padding-top: 160px;
+    }
+  }
+}
+@media (max-width: 760px){
+  header {
+    .for_shadow_all {
+      padding: 3px 41px 0 0;
+    }
+    .for_shadow {
+      margin-left: 0;
+      :last-child {
+        margin-right: 0;
+        padding-right: 60px;
+      }
+    }
+    img {
+      width: 98px;
+      height: 30px;
+    }
+    .disappearing_header {
+      padding-top: 30px;
+      .main_header {
+        padding: 0 21px 0 21px;
+      }
+    }
+    .header_congratulatory_text {
+      padding-top: 120px;//90
+    }
+    .congratulatory_text {
+      font-size: 35px;
+    }
+    .header_button {
+      input {
+        font-size: 16px;
+        @include button(233px, 55px, $header_bckg_button_c, $header_button_c);
+      }
+    }
 
+  }//menu nukatu!
+}
+@media (max-width: 450px) {
+  header {
+    .header_congratulatory_text {
+      padding-top: 90px;//90
+    }
+  }
 }
 section {
   .pagination {
@@ -207,7 +269,6 @@ section {
     right:20px;
     top: 50%;
     transform: translateY(-50%);
-
     font-size:1.4em;
     z-index: 10;
   }
@@ -248,63 +309,6 @@ section {
     top:0;
     right:4px;
     bottom:0;
-  }
-
-}
-@media (max-width: 933px) {
-  header {
-    .header_congratulatory_text {
-      padding-top: 160px;
-    }
-    .header_button {
-      padding-bottom: 100px;
-    }
-  }
-}
-@media (max-width: 760px){
-  header {
-    .for_shadow_all {
-      padding: 3px 41px 0 0;
-    }
-    .for_shadow {
-      margin-left: 0;
-      :last-child {
-        margin-right: 0;
-        padding-right: 60px;
-      }
-    }
-    img {
-      width: 98px;
-      height: 30px;
-    }
-    .disappearing_header {
-      padding-top: 30px;
-      .main_header {
-        padding: 0 21px 0 21px;
-      }
-    }
-    .header_congratulatory_text {
-      padding-top: 120px;//90
-    }
-    .congratulatory_text {
-      font-size: 35px;
-
-    }
-    .header_button {
-      padding-bottom: 100px;
-      button {
-        font-size: 16px;
-        @include button(233px, 55px, $header_bckg_button_c, $header_button_c);
-      }
-    }
-
-  }//menu nukatu!
-}
-@media (max-width: 450px) {
-  header {
-    .header_congratulatory_text {
-      padding-top: 90px;//90
-    }
   }
 }
 //create_menu
@@ -654,6 +658,96 @@ section {
     }
   }
 }
+section {
+  .portfolio {
+    width: 100%;
+    background-color: #ffdd99;
+    height: 1423px;
+    .headline_1 {
+      @extend %before_line;
+      color: #393939;
+      padding: 118px 0 23px 3px;
+      letter-spacing: 3.68px;
+      word-spacing: 1px;
+    }
+    .line {
+      @extend %line;
+    }
+    .underline_text {
+      @extend %after_line;
+      padding-top: 17px;
+      font-size: 18.2px;
+      letter-spacing: 0.2px;
+      word-spacing: 0.5px;
+      color: #393939;
+      :last-child {
+        padding-left: 4px;
+        letter-spacing: 0.25px;
+      }
+    }
+    .buttons {
+      width: 398px;
+      margin: 41px auto 0 auto;
+      display: flex;
+      @include button_f_portfolio(84px);
+      #first_but_port {
+        @include but_f_port(12px);
+        padding-left: 0;
+      }
+      #sec_but_port {
+        @include but_f_port(5px);
+      }
+      :nth-child(3){
+        button {
+          width: 90px;
+        }
+      }
+      :nth-child(4) {
+        button {
+          width: 90px;
+          padding-left: 3px;
+        }
+      }
+    }
+    .port_img {
+      img {
+        @include size(541px, 311px);
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  section {
+    .portfolio {
+      .buttons {
+        width: 238px;
+        height: 100px;
+        :nth-child(3){
+          button {
+            margin-left: 9px;
+          }
+        }
+        :nth-child(4) {
+          button {
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .load {
   width: 100%;
   height: 1000%;

@@ -132,3 +132,34 @@
     }
   }
 }
+@mixin button_f_portfolio ($width) {
+  form {
+    padding: 0;
+  }
+  button {
+    transition: .8s;
+    width: $width;
+    height: 38px;
+    background-color: rgba(0,0,0,0.07);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: titilliumweb_semibold, sans-serif;
+    padding: 0 0 0 5px;
+    font-size: 16px;
+    letter-spacing: 1.636px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #393939;
+  }
+  button:hover {
+    font-size: 18px
+  }
+  button:active {
+    font-size: 15px
+  }
+}
+@mixin but_f_port ($left) {
+  position: relative;
+  left: $left;
+}

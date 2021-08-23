@@ -13,7 +13,8 @@ $(window).scroll(function() {
             return swap;
         }
     }
-    if (from_top()) {
+
+    if (from_top() && swap) {
         (function($) {
             $('.second.circle').circleProgress({
                 value: 0.906,

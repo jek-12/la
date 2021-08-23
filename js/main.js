@@ -1,8 +1,7 @@
 
 
 window.addEventListener('load', function () {
-    setTimeout(()=>$(".load").css("opacity", "0"),3000);
-    setTimeout(()=>$(".load").css("display", "none"),3500);//appendutu .load
+
 let swap = 0;
 $.scrollify({
     section : "section",
