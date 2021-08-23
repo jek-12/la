@@ -853,12 +853,11 @@ time, mark, audio, video, active, hover, selected, form {
 ol, ul {
   list-style: none; }
 
-body {
-  box-sizing: content-box;
-  overflow: hidden; }
-
 * {
   box-sizing: border-box; }
+
+.row {
+  --bs-gutter-x: 0; }
 
 html {
   scroll-behavior: smooth; }
@@ -970,7 +969,6 @@ header {
     width: 118px;
     height: 37px; }
   header .congratulatory_text {
-    padding-left: 36px;
     font-kerning: none;
     text-align: center;
     font-family: titilliumweb_bold, sans-serif;
@@ -983,8 +981,7 @@ header {
     header .congratulatory_text :first-child {
       margin-right: 5px; }
   header .header_button {
-    width: 100%;
-    padding-left: 24px; }
+    width: 100%; }
     header .header_button .link {
       position: relative;
       bottom: -55px;
@@ -2179,7 +2176,7 @@ section .portfolio {
       letter-spacing: 0.25px; }
   section .portfolio .buttons {
     width: 398px;
-    margin: 41px auto 0 auto;
+    margin: 41px auto 62px auto;
     display: flex; }
     section .portfolio .buttons form {
       padding: 0; }
@@ -2193,30 +2190,112 @@ section .portfolio {
       text-align: center;
       font-family: titilliumweb_semibold, sans-serif;
       padding: 0 0 0 5px;
-      font-size: 16px;
+      font-size: 18px;
       letter-spacing: 1.636px;
       line-height: 19px;
       font-weight: 400;
       color: #393939; }
     section .portfolio .buttons button:hover {
-      font-size: 18px; }
+      font-size: 20px;
+      background-color: white; }
     section .portfolio .buttons button:active {
       font-size: 15px; }
     section .portfolio .buttons #first_but_port {
       position: relative;
-      left: 12px;
-      padding-left: 0; }
+      left: 11px;
+      padding-left: 0;
+      padding-right: 1px;
+      padding-bottom: 2px;
+      letter-spacing: 0.75px; }
     section .portfolio .buttons #sec_but_port {
       position: relative;
-      left: 5px; }
+      left: 5px;
+      letter-spacing: 0.45px;
+      padding-bottom: 2px; }
     section .portfolio .buttons :nth-child(3) button {
-      width: 90px; }
+      width: 90px;
+      padding-left: 3px;
+      padding-bottom: 1px;
+      letter-spacing: 1.286px;
+      font-size: 17px; }
     section .portfolio .buttons :nth-child(4) button {
       width: 90px;
-      padding-left: 3px; }
-  section .portfolio .port_img img {
-    width: 541px;
-    height: 311px; }
+      padding-left: 0;
+      padding-bottom: 1px;
+      letter-spacing: 1px;
+      font-size: 17px; }
+  section .portfolio .port_img {
+    max-width: 1120px;
+    margin: 0 auto; }
+    section .portfolio .port_img .portfolio_card {
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      section .portfolio .port_img .portfolio_card span {
+        font-family: titilliumweb_regular, sans-serif;
+        font-size: 18px;
+        line-height: 19px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        color: #393939; }
+    section .portfolio .port_img img {
+      width: 541px;
+      height: 311px; }
+  section .portfolio .top_row {
+    margin-bottom: 58px; }
+    section .portfolio .top_row div:first-child span {
+      position: relative;
+      bottom: -28px;
+      left: 2px; }
+    section .portfolio .top_row div:last-child .portfolio_card {
+      margin-top: 3px;
+      margin-left: 2px; }
+      section .portfolio .top_row div:last-child .portfolio_card span {
+        position: relative;
+        bottom: -24px;
+        left: -3px; }
+  section .portfolio .bot_row div:first-child .portfolio_card {
+    margin-left: 4px; }
+  section .portfolio .bot_row div:first-child span {
+    position: relative;
+    bottom: -27px;
+    left: -10px; }
+  section .portfolio .bot_row div:last-child .portfolio_card {
+    margin-top: 1px;
+    margin-left: 4px; }
+    section .portfolio .bot_row div:last-child .portfolio_card span {
+      position: relative;
+      bottom: -26px;
+      left: 7px; }
+  section .portfolio .button button {
+    position: relative;
+    bottom: -78px;
+    margin: 0 auto;
+    display: block;
+    transition: .8s;
+    padding-left: 8px;
+    padding-top: 3px;
+    text-transform: uppercase;
+    font-family: titilliumweb_semibold, sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    width: 293px;
+    height: 65px;
+    background-color: #17c2a4;
+    color: #fef6f3;
+    box-shadow: 0 5px #14a58c; }
+  section .portfolio .button button:hover {
+    color: rgba(254, 246, 243, 0.8);
+    font-size: 20px;
+    box-shadow: 0 0 15px rgba(221, 171, 22, 0.7); }
+  section .portfolio .button button:active {
+    font-size: 14px; }
 
 @media (max-width: 575px) {
   section .portfolio .buttons {
@@ -2225,7 +2304,10 @@ section .portfolio {
     section .portfolio .buttons :nth-child(3) button {
       margin-left: 9px; }
     section .portfolio .buttons :nth-child(4) button {
-      margin-left: 3px; } }
+      margin-left: 3px; }
+  section .portfolio .port_img img {
+    width: 315px;
+    height: 181px; } }
 
 .load {
   width: 100%;

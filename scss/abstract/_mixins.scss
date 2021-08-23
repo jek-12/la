@@ -146,14 +146,15 @@
     text-align: center;
     font-family: titilliumweb_semibold, sans-serif;
     padding: 0 0 0 5px;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 1.636px;
     line-height: 19px;
     font-weight: 400;
     color: #393939;
   }
   button:hover {
-    font-size: 18px
+    font-size: 20px;
+    background-color: white;
   }
   button:active {
     font-size: 15px
@@ -161,5 +162,10 @@
 }
 @mixin but_f_port ($left) {
   position: relative;
+  left: $left;
+}
+@mixin text_portf_pos ($bot, $left) {
+  position: relative;
+  bottom: $bot;
   left: $left;
 }

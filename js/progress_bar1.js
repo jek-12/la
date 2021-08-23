@@ -1,6 +1,5 @@
 let swap = true;
 $(window).scroll(function() {
-
     function from_top() {
         let hT = $('.skills').offset().top,
             hH = $('.skills').outerHeight() - 500,
@@ -13,7 +12,6 @@ $(window).scroll(function() {
             return swap;
         }
     }
-
     if (from_top() && swap) {
         (function($) {
             $('.second.circle').circleProgress({
