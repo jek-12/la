@@ -864,7 +864,7 @@ html {
 
 header {
   background-color: #87509c;
-  padding-bottom: 205px; }
+  padding-bottom: 100px; }
   header .disappearing_header {
     transition: 1s;
     position: fixed;
@@ -903,7 +903,6 @@ header {
     max-width: 1140px;
     margin: 0 auto;
     box-sizing: border-box;
-    top: 0;
     transition: 0.8s; }
     header .main_header .for_nav {
       z-index: 201; }
@@ -934,6 +933,9 @@ header {
           text-transform: uppercase;
           text-decoration: none;
           color: #ffffff; }
+    header .main_header img {
+      width: 118px;
+      height: 37px; }
   header .for_shadow_all {
     padding: 3px 100px 0 0;
     max-width: 1140px;
@@ -960,62 +962,12 @@ header {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.25);
     width: 77.5px; }
-  header .header_congratulatory_text {
-    padding-top: 228px;
-    width: 100%; }
-  header .menu_transform {
-    align-items: flex-end; }
-  header img {
-    width: 118px;
-    height: 37px; }
-  header .congratulatory_text {
-    font-kerning: none;
-    text-align: center;
-    font-family: titilliumweb_bold, sans-serif;
-    color: #f7f3ea;
-    font-style: normal;
-    letter-spacing: 0;
-    line-height: 49px;
-    font-weight: 400;
-    font-size: 42.2px; }
-    header .congratulatory_text :first-child {
-      margin-right: 5px; }
-  header .header_button {
-    width: 100%; }
-    header .header_button .link {
-      position: relative;
-      bottom: -55px;
-      margin: 0 auto;
-      width: min-content; }
-    header .header_button input {
-      transition: .8s;
-      padding-left: 7px;
-      padding-top: 3px;
-      text-transform: uppercase;
-      font-family: titilliumweb_semibold, sans-serif;
-      text-align: center;
-      border-radius: 5px;
-      border: none;
-      font-size: 18px;
-      font-weight: 400;
-      letter-spacing: 0.434px;
-      width: 293px;
-      height: 65px;
-      background-color: #eb7d4b;
-      color: #fef6f3;
-      box-shadow: 0 5px #c86a40; }
-    header .header_button input:hover {
-      color: rgba(254, 246, 243, 0.8);
-      font-size: 20px;
-      box-shadow: 0 0 15px rgba(11, 6, 62, 0.7); }
-    header .header_button input:active {
-      font-size: 14px; }
+  header .shadow1 {
+    visibility: visible; }
 
 @media (max-width: 933px) {
   header {
-    padding-bottom: 100px; }
-    header .header_congratulatory_text {
-      padding-top: 160px; } }
+    padding-bottom: 100px; } }
 
 @media (max-width: 760px) {
   header .for_shadow_all {
@@ -1030,68 +982,80 @@ header {
     height: 30px; }
   header .disappearing_header {
     padding-top: 30px; }
-    header .disappearing_header .main_header {
-      padding: 0 21px 0 21px; }
-  header .header_congratulatory_text {
-    padding-top: 120px; }
-  header .congratulatory_text {
+  header .main_header {
+    padding: 0 21px 0 21px; } }
+
+@media (max-width: 739px) {
+  header .main_header {
+    display: flex;
+    flex-wrap: wrap; }
+    header .main_header div:first-child {
+      margin-left: 35%; } }
+
+.load {
+  width: 100%;
+  height: 1000%;
+  position: absolute;
+  z-index: 10000;
+  background-color: black;
+  opacity: 1;
+  transition: .5s; }
+
+section .congratulation {
+  background-color: #87509c;
+  padding-top: 128px;
+  padding-bottom: 149px; }
+  section .congratulation .congratulatory_text {
+    padding: 0 10px 0;
+    font-kerning: none;
+    text-align: center;
+    font-family: titilliumweb_bold, sans-serif;
+    color: #f7f3ea;
+    font-style: normal;
+    letter-spacing: 0;
+    line-height: 49px;
+    font-size: 42.2px; }
+    section .congratulation .congratulatory_text :first-child {
+      margin-right: 5px; }
+  section .congratulation .header_button {
+    padding-top: 55px; }
+    section .congratulation .header_button input {
+      display: block;
+      margin: 0 auto;
+      transition: .8s;
+      padding-left: 7px;
+      padding-top: 3px;
+      text-transform: uppercase;
+      font-family: titilliumweb_semibold, sans-serif;
+      text-align: center;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      letter-spacing: 0.434px;
+      width: 293px;
+      height: 66px;
+      background-color: #eb7d4b;
+      color: #fef6f3;
+      box-shadow: 0 4px #c86a40; }
+    section .congratulation .header_button input:hover {
+      color: rgba(254, 246, 243, 0.8);
+      font-size: 20px;
+      box-shadow: 0 0 15px rgba(11, 6, 62, 0.7); }
+    section .congratulation .header_button input:active {
+      font-size: 14px; }
+
+@media (max-width: 933px) {
+  section .congratulation {
+    padding-top: 117px;
+    padding-bottom: 60px; } }
+
+@media (max-width: 760px) {
+  section .congratulation .congratulatory_text {
     font-size: 35px; }
-  header .header_button input {
+  section .congratulation .header_button input {
     font-size: 16px;
     width: 233px;
-    height: 55px;
-    background-color: #eb7d4b;
-    color: #fef6f3; } }
-
-@media (max-width: 450px) {
-  header .header_congratulatory_text {
-    padding-top: 90px; } }
-
-section .pagination {
-  position: fixed;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.4em;
-  z-index: 10; }
-
-section .pagination a {
-  display: block;
-  height: 20px;
-  margin-bottom: 5px;
-  color: white;
-  position: relative;
-  padding: 4px; }
-
-section .pagination a.active:after {
-  box-shadow: inset 0 0 0 5px; }
-
-section .pagination a .hover-text {
-  position: absolute;
-  right: 15px;
-  top: 7px;
-  opacity: 0;
-  -webkit-transition: opacity 0.5s ease;
-  transition: opacity 0.5s ease;
-  padding-right: 15px; }
-
-section .pagination a:hover .hover-text {
-  opacity: 1; }
-
-section .pagination a:after {
-  -webkit-transition: box-shadow 0.5s ease;
-  transition: box-shadow 0.5s ease;
-  width: 10px;
-  height: 10px;
-  display: block;
-  border: 1px solid;
-  border-radius: 50%;
-  content: '';
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 4px;
-  bottom: 0; }
+    height: 55px; } }
 
 section .service_section .headline_1, section .team .headline_1, section .skills .headline_1, section .portfolio .headline_1 {
   font-family: titilliumweb_semibold, sans-serif;
@@ -1140,6 +1104,46 @@ section .service_section {
   width: 100%;
   background-color: #17c2a4;
   padding-bottom: 123px; }
+  section .service_section .pagination {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4em;
+    z-index: 10; }
+  section .service_section .pagination a {
+    display: block;
+    height: 20px;
+    margin-bottom: 5px;
+    color: white;
+    position: relative;
+    padding: 4px; }
+  section .service_section .pagination a.active:after {
+    box-shadow: inset 0 0 0 5px; }
+  section .service_section .pagination a .hover-text {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    padding-right: 15px; }
+  section .service_section .pagination a:hover .hover-text {
+    opacity: 1; }
+  section .service_section .pagination a:after {
+    -webkit-transition: box-shadow 0.5s ease;
+    transition: box-shadow 0.5s ease;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 1px solid;
+    border-radius: 50%;
+    content: '';
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 4px;
+    bottom: 0; }
   section .service_section .underline_text :first-child {
     word-spacing: 0.5px;
     padding-left: 3px; }
@@ -2269,33 +2273,32 @@ section .portfolio {
       position: relative;
       bottom: -26px;
       left: 7px; }
-  section .portfolio .button button {
-    position: relative;
-    bottom: -78px;
-    margin: 0 auto;
-    display: block;
-    transition: .8s;
-    padding-left: 8px;
-    padding-top: 3px;
-    text-transform: uppercase;
-    font-family: titilliumweb_semibold, sans-serif;
-    text-align: center;
-    border-radius: 5px;
-    border: none;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.3px;
-    width: 293px;
-    height: 65px;
-    background-color: #17c2a4;
-    color: #fef6f3;
-    box-shadow: 0 5px #14a58c; }
-  section .portfolio .button button:hover {
-    color: rgba(254, 246, 243, 0.8);
-    font-size: 20px;
-    box-shadow: 0 0 15px rgba(221, 171, 22, 0.7); }
-  section .portfolio .button button:active {
-    font-size: 14px; }
+  section .portfolio .button {
+    padding-top: 78px; }
+    section .portfolio .button button {
+      display: block;
+      margin: 0 auto;
+      transition: .8s;
+      padding-left: 8px;
+      padding-top: 3px;
+      text-transform: uppercase;
+      font-family: titilliumweb_semibold, sans-serif;
+      text-align: center;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+      width: 293px;
+      height: 66px;
+      background-color: #17c2a4;
+      color: #fef6f3;
+      box-shadow: 0 4px #14a58c; }
+    section .portfolio .button button:hover {
+      color: rgba(254, 246, 243, 0.8);
+      font-size: 20px;
+      box-shadow: 0 0 15px rgba(221, 171, 22, 0.7); }
+    section .portfolio .button button:active {
+      font-size: 14px; }
 
 @media (max-width: 575px) {
   section .portfolio .buttons {
@@ -2308,14 +2311,5 @@ section .portfolio {
   section .portfolio .port_img img {
     width: 315px;
     height: 181px; } }
-
-.load {
-  width: 100%;
-  height: 1000%;
-  position: absolute;
-  z-index: 10000;
-  background-color: black;
-  opacity: 1;
-  transition: .5s; }
 
 /*# sourceMappingURL=style.css.map */

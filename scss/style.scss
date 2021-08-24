@@ -3,4 +3,14 @@
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/grid";
 
+@import "abstract/font";
+@import 'abstract/colors';
+@import "abstract/buttons";
+@import "abstract/mixins";
+
 @import "components/header";
+@import "components/congratulation";
+@import "components/service";
+@import "components/team";
+@import "components/skills";
+@import "components/portfolio";

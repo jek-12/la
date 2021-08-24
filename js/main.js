@@ -1,5 +1,4 @@
 
-
 window.addEventListener('load', function () {
 
 let swap = 0;
@@ -27,24 +26,28 @@ $.scrollify({
 
     },
     after: function() {
-    if(swap === 0) {
-        let nav_menu_icon = $(".nav_box");
-        let nav_menu_inside = $(".nav_box span");
-        anim(nav_menu_icon);
-        anim(nav_menu_inside);
-        anim_border(nav_menu_icon, nav_menu_inside);
+        $(nav_items_shadow).each(function() {
+            $(this).css("visibility", "hidden");
+        });
+        $(nav_items_shadow[$.scrollify.currentIndex()]).css("visibility", "visible");
+        if(swap === 0) {
+            let nav_menu_icon = $(".nav_box");
+            let nav_menu_inside = $(".nav_box span");
+            anim(nav_menu_icon);
+            anim(nav_menu_inside);
+            anim_border(nav_menu_icon, nav_menu_inside);
 
-        let menu = $(".disappearing_header");
-        menu.css("width", "0%");
-        $(".main_header").css("opacity", "0")
-
-        menu.mouseleave(function () {
-            nav_menu_icon.css("transform", "rotate(180deg)");
+            let menu = $(".disappearing_header");
             menu.css("width", "0%");
-            $(".main_header").css("opacity", "0");
-            });
-        swap++;
-    }
+            $(".main_header").css("opacity", "0")
+
+            menu.mouseleave(function () {
+                nav_menu_icon.css("transform", "rotate(180deg)");
+                menu.css("width", "0%");
+                $(".main_header").css("opacity", "0");
+                });
+            swap++;
+        }
     },
     afterResize:function() {},
     afterRender:function() {

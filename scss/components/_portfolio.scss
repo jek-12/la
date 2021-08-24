@@ -1,0 +1,156 @@
+section {
+  .portfolio {
+    width: 100%;
+    background-color: #ffdd99;
+    height: 1423px;
+    .headline_1 {
+      @extend %before_line;
+      color: #393939;
+      padding: 118px 0 23px 3px;
+      letter-spacing: 3.68px;
+      word-spacing: 1px;
+    }
+    .line {
+      @extend %line;
+    }
+    .underline_text {
+      @extend %after_line;
+      padding-top: 17px;
+      font-size: 18.2px;
+      letter-spacing: 0.2px;
+      word-spacing: 0.5px;
+      color: #393939;
+      :last-child {
+        padding-left: 4px;
+        letter-spacing: 0.25px;
+      }
+    }
+    .buttons {
+      width: 398px;
+      margin: 41px auto 62px auto;
+      display: flex;
+      @include button_f_portfolio(84px);
+      #first_but_port {
+        @include but_f_port(11px);
+        padding-left: 0;
+        padding-right: 1px;
+        padding-bottom: 2px;
+        letter-spacing: 0.75px;
+      }
+      #sec_but_port {
+        @include but_f_port(5px);
+        letter-spacing: 0.45px;
+        padding-bottom: 2px;
+      }
+      :nth-child(3){
+        button {
+          width: 90px;
+          padding-left: 3px;
+          padding-bottom: 1px;
+          letter-spacing: 1.286px;
+          font-size: 17px;
+        }
+      }
+      :nth-child(4) {
+        button {
+          width: 90px;
+          padding-left: 0;
+          padding-bottom: 1px;
+          letter-spacing: 1px;
+          font-size: 17px;
+        }
+      }
+    }
+    .port_img {
+      max-width: 1120px;
+      margin: 0 auto;
+      .portfolio_card {
+        height: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+          font-family: titilliumweb_regular, sans-serif;
+          font-size: 18px;
+          line-height: 19px;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          color: #393939;
+        }
+      }
+      img {
+        @include size(541px,311px);
+      }
+    }
+    .top_row {
+      margin-bottom: 58px;
+      div{
+        &:first-child {
+          span {
+            @include text_portf_pos(-28px, 2px);
+          }
+        }
+        &:last-child {
+          .portfolio_card {
+            margin-top: 3px;
+            margin-left: 2px;
+            span {
+              @include text_portf_pos(-24px, -3px);
+            }
+          }
+        }
+      }
+    }
+    .bot_row {
+      div{
+        &:first-child {
+          .portfolio_card {
+            margin-left: 4px;
+          }
+          span {
+            @include text_portf_pos(-27px, -10px);
+          }
+        }
+        &:last-child {
+          .portfolio_card {
+            margin-top: 1px;
+            margin-left: 4px;
+            span {
+              @include text_portf_pos(-26px, 7px);
+            }
+          }
+        }
+      }
+    }
+    @include big_buttons(button , button, #17c2a4, $header_button_c, 78px, 0.3px, 8px, $header_button_c, #14a58c, #ddab16);
+  }
+}
+@media (max-width: 1105px) {
+
+}
+@media (max-width: 575px) {
+  section {
+    .portfolio {
+      .buttons {
+        width: 238px;
+        height: 100px;
+        :nth-child(3){
+          button {
+            margin-left: 9px;
+          }
+        }
+        :nth-child(4) {
+          button {
+            margin-left: 3px;
+          }
+        }
+      }
+      .port_img {
+        img {
+          @include size(315px,181px);
+        }
+      }
+    }
+  }
+}
