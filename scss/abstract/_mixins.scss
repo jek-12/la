@@ -30,7 +30,8 @@
     position: relative;
     width: 130px;
     height: 15px;
-    margin: 30px auto 0 auto;
+    left: 20px;
+    margin: 50px auto 0 auto;
   }
   .swiper-pagination-bullet {
     @include size(12px, 12px);
@@ -192,4 +193,45 @@
   position: relative;
   bottom: $bot;
   left: $left;
+}
+
+@mixin about_us_nth2_4 ($marg_l, $pad_bot, $w_space_1 ,$l_space_1, $w_space_2, $l_space_2) {
+  div:nth-child(2) {
+    padding-bottom: $pad_bot;
+    .about_card {
+      :nth-child(1) {
+        word-spacing: $w_space_1;
+        letter-spacing: $l_space_1;
+      }
+    }
+  }
+  div:nth-child(4) {
+    .about_card {
+      width: 390px;
+      margin-left: $marg_l;
+      padding-top: 3px;
+      :nth-child(1) {
+        word-spacing: $w_space_2;
+        letter-spacing: $l_space_2;
+      }
+    }
+  }
+}
+@mixin img_marg ($nth, $marg_l) {
+  div:nth-child(#{$nth}) {
+    img {
+      margin-left: $marg_l;
+    }
+  }
+}
+@mixin about_us_text_par ($f_fam, $f_size, $l_height, $color) {
+  font-family: $f_fam, sans-serif;
+  font-size: $f_size;
+  line-height: $l_height;
+  color: $color;
+}
+@mixin form_req_disp ($type){
+  .placeinput #{$type}:invalid + .place_holder {
+    display: inline;
+  }
 }

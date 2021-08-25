@@ -6,7 +6,9 @@
         slidesPerGroup: 1,
         loop: true,
         grabCursor: true,
-        pagination: {
+
+
+            pagination: {
             el: '.swiper-pagination-0',
             clickable: true,
         },

@@ -6,5 +6,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="scrollify" level="application" />
     <orderEntry type="library" name="circle-progress" level="application" />
+    <orderEntry type="library" name="circle-progress" level="application" />
   </component>
 </module>

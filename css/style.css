@@ -1238,7 +1238,8 @@ section .service_section {
     position: relative;
     width: 130px;
     height: 15px;
-    margin: 30px auto 0 auto; }
+    left: 20px;
+    margin: 50px auto 0 auto; }
   section .service_section .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -1745,7 +1746,8 @@ section .team {
     position: relative;
     width: 130px;
     height: 15px;
-    margin: 30px auto 0 auto; }
+    left: 20px;
+    margin: 50px auto 0 auto; }
   section .team .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -2174,7 +2176,8 @@ section .skills {
     position: relative;
     width: 130px;
     height: 15px;
-    margin: 30px auto 0 auto; }
+    left: 20px;
+    margin: 50px auto 0 auto; }
   section .skills .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
@@ -2368,7 +2371,7 @@ section .portfolio {
   section .portfolio {
     padding-bottom: 43px; }
     section .portfolio .headline_1 {
-      font-size: 19px; }
+      font-size: 38px; }
     section .portfolio .col-sm-12 {
       padding-bottom: 0; }
     section .portfolio .button {
@@ -2386,9 +2389,13 @@ section .portfolio {
     section .portfolio .port_img .portfolio_card {
       height: 290px; } }
 
+@media (max-width: 499px) {
+  section .portfolio .headline_1 {
+    font-size: 19px; } }
+
 section .about_us {
-  height: 894px;
-  background-color: #d74680; }
+  background-color: #d74680;
+  padding-bottom: 139px; }
   section .about_us .headline_1 {
     font-family: titilliumweb_semibold, sans-serif;
     font-size: 39px;
@@ -2416,9 +2423,268 @@ section .about_us {
     letter-spacing: 0.25px;
     word-spacing: 0.5px;
     color: #ffffff;
+    padding-top: 17px;
+    padding-bottom: 66px; }
+  section .about_us .about_card {
+    width: 360px;
+    height: 160px;
+    display: flex;
+    flex-direction: column; }
+    section .about_us .about_card:nth-child(2n+1) {
+      margin-left: 53px;
+      padding-top: 3px; }
+  section .about_us img {
+    width: 96px;
+    height: 96px;
+    border-radius: 100%; }
+  section .about_us .row {
+    max-width: 1100px;
+    margin: 0 auto; }
+    section .about_us .row span:nth-child(1) {
+      font-family: titilliumweb_light, sans-serif;
+      font-size: 21px;
+      line-height: 31px;
+      color: #ffffff;
+      font-style: italic; }
+    section .about_us .row span:nth-child(2) {
+      font-family: titilliumweb_semibold, sans-serif;
+      font-size: 24px;
+      line-height: 26px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.002em;
+      font-weight: 700;
+      padding-top: 22px; }
+    section .about_us .row span:nth-child(3) {
+      font-family: titilliumweb_regular, sans-serif;
+      font-size: 18px;
+      line-height: 27px;
+      color: #ffdd99;
+      letter-spacing: 0.02em;
+      padding-left: 1px; }
+    section .about_us .row div:nth-child(1) img {
+      margin-left: 1px; }
+    section .about_us .row div:nth-child(3) img {
+      margin-left: 39px; }
+  section .about_us .top_row {
+    padding-bottom: 153px; }
+    section .about_us .top_row div:nth-child(2) {
+      padding-bottom: 0; }
+      section .about_us .top_row div:nth-child(2) .about_card :nth-child(1) {
+        word-spacing: -1px;
+        letter-spacing: 0.49px; }
+    section .about_us .top_row div:nth-child(4) .about_card {
+      width: 390px;
+      margin-left: 90px;
+      padding-top: 3px; }
+      section .about_us .top_row div:nth-child(4) .about_card :nth-child(1) {
+        word-spacing: 0;
+        letter-spacing: 0.3px; }
+  section .about_us .bot_row div:nth-child(2) {
+    padding-bottom: 0; }
+    section .about_us .bot_row div:nth-child(2) .about_card :nth-child(1) {
+      word-spacing: -1px;
+      letter-spacing: 0.45px; }
+  section .about_us .bot_row div:nth-child(4) .about_card {
+    width: 390px;
+    margin-left: 89px;
+    padding-top: 3px; }
+    section .about_us .bot_row div:nth-child(4) .about_card :nth-child(1) {
+      word-spacing: 0;
+      letter-spacing: 0.2px; }
+  section .about_us .bot_row div:nth-child(3) img {
+    margin-left: 40px; }
+  section .about_us .bot_row span:nth-child(2) {
+    letter-spacing: 0.27px;
+    padding-top: 23px; }
+
+@media (max-width: 1199px) {
+  section .about_us .row {
+    justify-content: center;
+    display: flex;
+    width: 100%; }
+    section .about_us .row div:nth-child(3) img {
+      margin-left: 1px; }
+  section .about_us .about_card {
+    max-width: 320px;
+    margin: 0 auto; }
+    section .about_us .about_card:nth-child(2n+1) {
+      margin-left: auto; }
+  section .about_us .top_row {
+    padding-top: 0;
+    padding-bottom: 123px; }
+    section .about_us .top_row div:nth-child(2) {
+      padding-bottom: 100px; }
+      section .about_us .top_row div:nth-child(2) .about_card :nth-child(1) {
+        word-spacing: -1px;
+        letter-spacing: 0.49px; }
+    section .about_us .top_row div:nth-child(4) .about_card {
+      width: 390px;
+      margin-left: auto;
+      padding-top: 3px; }
+      section .about_us .top_row div:nth-child(4) .about_card :nth-child(1) {
+        word-spacing: 0;
+        letter-spacing: 0.3px; }
+  section .about_us .bot_row div:nth-child(2) {
+    padding-bottom: 100px; }
+    section .about_us .bot_row div:nth-child(2) .about_card :nth-child(1) {
+      word-spacing: -1px;
+      letter-spacing: 0.45px; }
+  section .about_us .bot_row div:nth-child(4) .about_card {
+    width: 390px;
+    margin-left: auto;
+    padding-top: 3px; }
+    section .about_us .bot_row div:nth-child(4) .about_card :nth-child(1) {
+      word-spacing: 0;
+      letter-spacing: 0.2px; }
+  section .about_us .face {
+    justify-content: center;
+    display: flex; } }
+
+@media (max-width: 615px) {
+  section .about_us .headline_1 {
+    padding-left: 0;
+    font-size: 30px; } }
+
+@media (max-width: 499px) {
+  section .about_us .headline_1 {
+    font-size: 17px; } }
+
+section .contact_form .top_form .form:nth-child(1) span, section .contact_form .top_form .form:nth-child(2) span, section .contact_form .bot_form :nth-child(2) {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 0;
+  color: #ff4444;
+  z-index: 10; }
+
+section .contact_form {
+  height: 819px;
+  background-color: #3c5499; }
+  section .contact_form .headline_1 {
+    font-family: titilliumweb_semibold, sans-serif;
+    font-size: 39px;
+    line-height: 29px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 118px 0 23px 5px;
+    width: max-content;
+    font-kerning: none;
+    letter-spacing: 3.82px;
+    word-spacing: 0; }
+  section .contact_form .line {
+    width: 87px;
+    height: 4px;
+    opacity: 1;
+    background-color: #273a71;
+    margin: 0 auto; }
+  section .contact_form .underline_text {
+    text-align: center;
+    font-family: titilliumweb_regular, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: 0.36px;
+    word-spacing: 0;
+    color: #ffffff;
     padding-top: 17px; }
-    section .about_us .underline_text .about_card {
-      height: 125px;
-      width: 330px; }
+    section .contact_form .underline_text :first-child {
+      word-spacing: 0.5px;
+      padding-left: 3px; }
+  section .contact_form form {
+    margin-top: 75px; }
+  section .contact_form .place_holder {
+    z-index: 100;
+    cursor: text;
+    position: absolute;
+    display: none;
+    color: lightgrey; }
+  section .contact_form .placeinput input:invalid + .place_holder {
+    display: inline; }
+  section .contact_form .placeinput textarea:invalid + .place_holder {
+    display: inline; }
+  section .contact_form .placeinput {
+    position: relative; }
+  section .contact_form .place_holder span {
+    color: red; }
+  section .contact_form .top_form {
+    max-width: 860px;
+    margin: 0 auto; }
+    section .contact_form .top_form .form:nth-child(1) span {
+      left: 111px;
+      top: 8px; }
+    section .contact_form .top_form .form:nth-child(2) span {
+      left: 124px;
+      top: 8px; }
+    section .contact_form .top_form .form input {
+      position: relative;
+      width: 414px;
+      height: 56px;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      padding: 0 25px;
+      font-family: titilliumweb_regular, sans-serif;
+      font-size: 18px;
+      line-height: 18px;
+      color: #ffffff;
+      background-color: #273a71; }
+    section .contact_form .top_form .form #second {
+      margin-left: 16px; }
+  section .contact_form .bot_form {
+    width: 860px;
+    height: 200px;
+    margin: 27px auto 0 auto; }
+    section .contact_form .bot_form :nth-child(2) {
+      left: 133px;
+      top: 30px; }
+  section .contact_form #third {
+    width: 860px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #273a71;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    resize: none;
+    position: relative;
+    padding: 21px 25px 0 25px;
+    font-family: titilliumweb_regular, sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ffffff; }
+  section .contact_form .button {
+    padding-top: 0; }
+    section .contact_form .button button {
+      display: block;
+      margin: 0 auto;
+      transition: .8s;
+      padding-left: 6px;
+      padding-top: 3px;
+      text-transform: uppercase;
+      font-family: titilliumweb_semibold, sans-serif;
+      text-align: center;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      letter-spacing: 0;
+      width: 293px;
+      height: 66px;
+      background-color: #30bae7;
+      color: #ffffff;
+      box-shadow: 0 4px #299ec5; }
+    section .contact_form .button button:hover {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 20px;
+      box-shadow: 0 0 15px rgba(22, 102, 221, 0.7); }
+    section .contact_form .button button:active {
+      font-size: 14px; }
+  @media (max-width: 760px) {
+    section .contact_form .button button {
+      font-size: 16px;
+      width: 233px;
+      height: 55px; } }
+  section .contact_form .button {
+    margin-top: -16px; }
 
 /*# sourceMappingURL=style.css.map */

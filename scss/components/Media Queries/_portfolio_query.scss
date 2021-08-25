@@ -15,7 +15,7 @@
     .portfolio {
       padding-bottom: 43px;
       .headline_1 {
-        font-size: 19px;
+        font-size: 38px;
       }
       .col-sm-12 {
         padding-bottom: 0;
@@ -44,6 +44,15 @@
         .portfolio_card {
           height: 290px;
         }
+      }
+    }
+  }
+}
+@media (max-width: 499px) {
+  section {
+    .portfolio {
+      .headline_1 {
+        font-size: 19px;
       }
     }
   }
