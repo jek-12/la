@@ -30,6 +30,13 @@ $.scrollify({
             $(this).css("visibility", "hidden");
         });
         $(nav_items_shadow[$.scrollify.currentIndex()]).css("visibility", "visible");
+        let color = ["black", "blue", "red"];
+        let a = Array.from($(".nav_bar a"));
+
+        $(a).each(function() {
+            $(this).css("color", color[$.scrollify.currentIndex()]);
+        });//box-shadow for logo
+
         if(swap === 0) {
             let nav_menu_icon = $(".nav_box");
             let nav_menu_inside = $(".nav_box span");

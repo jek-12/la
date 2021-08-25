@@ -8,9 +8,24 @@
 @import "abstract/buttons";
 @import "abstract/mixins";
 
-@import "components/header";
+@import "abstract/reset";
+
+@import "components/header & footer/header";
+@import "components/Media Queries/header & footer/header_query";
+
 @import "components/congratulation";
+@import "components/Media Queries/congratulation_query";
+
 @import "components/service";
+@import "components/Media Queries/service_query";
+
 @import "components/team";
+@import "components/Media Queries/team_query";
+
 @import "components/skills";
+@import "components/Media Queries/skills_query";
+
 @import "components/portfolio";
+@import "components/Media Queries/portfolio_query";
+
+@import "components/about_us";

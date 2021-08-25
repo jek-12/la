@@ -1,7 +1,6 @@
-@import "../abstract/mixins";
 section {
   .congratulation {
-    background-color: #87509c;
+    background-color: $congratulation_bckg_c;
     padding-top: 128px;
     padding-bottom: 149px;
     .congratulatory_text {
@@ -18,31 +17,7 @@ section {
         margin-right: 5px;
       }
     }
-    @include big_buttons(header_button, input, $header_bckg_button_c, $header_button_c, 55px, 0.434px, 7px, $header_button_c, #c86a40, #0b063e);
+    @include big_buttons(header_button, input, $header_bckg_button_c, $header_button_c, 55px, 0.434px, 7px, $header_button_c, $congratulation_button_shadow_c, $congratulation_button_hover_shadow_c);
   }
 }
-@media (max-width: 933px) {
-  section {
-    .congratulation {
-      padding-top: 117px;
-      padding-bottom: 60px;
-    }
-  }
-}
-@media (max-width: 760px){
-  section {
-    .congratulation {
-      .congratulatory_text {
-        font-size: 35px;
-      }
-      .header_button {
-        input {
-          font-size: 16px;
-          width: 233px;
-          height: 55px;
-          //@include button(233px, 55px, $header_bckg_button_c, $header_button_c);
-        }
-      }
-    }
-  }
-}
+

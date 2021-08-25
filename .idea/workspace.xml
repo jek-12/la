@@ -2,16 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7d70a29a-e986-462b-99f8-5148f0e1f9ed" name="Changes" comment="Changes">
-      <change afterPath="$PROJECT_DIR$/scss/components/_congratulation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/abstract/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/components/Media Queries/_portfolio_query.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/components/Media Queries/_service_query.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/components/Media Queries/_skills_query.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/components/Media Queries/_team_query.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/components/Media Queries/header &amp; footer/_header_query.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scss/components/_about_us.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/shadow.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/shadow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/menu_animation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/menu_animation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/abstract/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/abstract/_buttons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/abstract/_colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/abstract/_colors.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/abstract/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/abstract/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/components/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/components/_header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/components/_congratulation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/components/_congratulation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/components/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/components/header &amp; footer/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/components/_portfolio.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/components/_portfolio.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/components/_service.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/components/_service.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/components/_skills.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/components/_skills.scss" afterDir="false" />
@@ -51,6 +59,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/scss/components/header &amp; footer" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +84,8 @@
       <workItem from="1629585768489" duration="9077000" />
       <workItem from="1629597909794" duration="11289000" />
       <workItem from="1629669562639" duration="18328000" />
-      <workItem from="1629735184173" duration="38782000" />
+      <workItem from="1629735184173" duration="39431000" />
+      <workItem from="1629834761525" duration="26006000" />
     </task>
     <servers />
   </component>

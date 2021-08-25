@@ -1,0 +1,17 @@
+section {
+  .about_us {
+    height: 894px;//
+    background-color: $about_us_bckg_c;
+
+    @include headline_1(39px, $about_us_headline_c, 117px 0 23px 5px, 3.4px, 1px);
+    @include line(0.14, $about_us_line_c);
+    .underline_text {
+      @include underline_text(17px, 18.2px, 0.25px, 0.5px, $about_us_underline_c);
+
+      .about_card {
+        height: 125px;
+        width: 330px;
+      }//postav
+    }
+  }
+}

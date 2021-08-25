@@ -8,7 +8,8 @@
  $(window).on('scroll', function() {
      let y_scroll_pos = window.pageYOffset;
      let scroll_pos_test = element_position;
-     if(y_scroll_pos === scroll_pos_test) {
+     $(".disappearing_header").css("padding-top", "27px");
+     if(y_scroll_pos === scroll_pos_test && $(window).width() > 900) {
          $(".disappearing_header").css("padding-top", "57px");
      }
  });
